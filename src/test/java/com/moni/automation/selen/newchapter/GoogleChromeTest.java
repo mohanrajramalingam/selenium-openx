@@ -1,6 +1,6 @@
 package com.moni.automation.selen.newchapter;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.util.concurrent.TimeUnit;
 

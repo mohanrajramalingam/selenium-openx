@@ -1,6 +1,5 @@
 package com.moni.automation.selen.newchapter;
 
-
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -16,7 +15,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class RadioButtonTesting {
 
 	private WebDriver webDriver;
-	
+
 	@Before
 	public void setUp() throws Exception {
 		System.setProperty("webdriver.gecko.driver", "./geckodriver.exe");
@@ -29,23 +28,25 @@ public class RadioButtonTesting {
 	public void tearDown() throws Exception {
 		webDriver.quit();
 	}
-	
+
 	@Test
 	public void testRadioButton() {
 		navigateToUrl();
-		for(WebElement radioButton : radioGroup) {
+		for (WebElement radioButton : radioGroup) {
 			radioButton.click();
 			boolean isSelected = radioButton.isSelected();
-			if(isSelected)
+			
+			if (isSelected)
 				System.out.println("selected radio button : " + radioButton.getAttribute("value"));
-			}
+			
+		}
 	}
 
 	List<WebElement> radioGroup;
-	
+
 	@Rule
 	public ScreenshotRule screenShootRule = new ScreenshotRule(webDriver);
-	
+
 	private void navigateToUrl() {
 		webDriver.get("https://www.keynotesupport.com/websites/contact-form-example-radio-buttons.shtml");
 		radioGroup = webDriver.findElements(By.name("software"));

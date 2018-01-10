@@ -17,9 +17,6 @@ public class SeleniumHq {
 		webDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		webDriver.get(baseUrl + "/");
 		System.out.println(webDriver.getCurrentUrl());
-		System.out.println("*******************");
-		System.out.println(webDriver.getPageSource());
-		System.out.println("*******************");
 	}
 
 	public Documentation clickDocumentation() {

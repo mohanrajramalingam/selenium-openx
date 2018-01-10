@@ -41,7 +41,7 @@ public class ScreenshotRule implements MethodRule {
 	                    out.write(((TakesScreenshot) webDriver).getScreenshotAs(OutputType.BYTES));
 	                    out.close();
 	                } catch (Exception e) {
-	                    //If the screenshot fails no need to interrupt the tests
+	                	System.out.println(e);
 	                }
 			}
 

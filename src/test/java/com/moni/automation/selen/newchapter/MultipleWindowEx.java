@@ -28,8 +28,6 @@ public class MultipleWindowEx {
 		openFirstWindow();
 		openSecondWindow();
 		System.out.println("Number of windows handle: " + webDriver.getWindowHandles().size());
-		
-        webDriver.switchTo().window(window1);
         webDriver.switchTo().window(window2);
         webDriver.switchTo().window(window1);
         webDriver.switchTo().window(window2);
