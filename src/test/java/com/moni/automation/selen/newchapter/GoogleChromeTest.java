@@ -24,10 +24,10 @@ public class GoogleChromeTest {
 		webDriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
 
-	@After
-	public void tearDown() throws Exception {
-		webDriver.quit();
-	}
+//	@After
+//	public void tearDown() throws Exception {
+//		webDriver.quit();
+//	}
 
 	@Test
 	public void testOne() throws Exception {
