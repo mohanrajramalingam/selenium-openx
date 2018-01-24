@@ -43,6 +43,6 @@ public class GoogleChromeTest {
 
 	@Test
 	public void testOne() throws Exception {
-		System.out.println("Test");
+		System.out.println("This is my test, going to run from jenkins");
 	}
 }
