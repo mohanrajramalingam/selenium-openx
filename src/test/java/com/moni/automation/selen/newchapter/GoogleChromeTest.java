@@ -44,5 +44,8 @@ public class GoogleChromeTest {
 	@Test
 	public void testOne() throws Exception {
 		System.out.println("This is my test, going to run from jenkins");
+		System.setProperty("webdriver.gecko.driver", "./geckodriver.exe");
+		webDriver = new FirefoxDriver();
+		webDriver.manage().window().maximize();
 	}
 }
